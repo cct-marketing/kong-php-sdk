@@ -1,4 +1,5 @@
 .DS_Store
+vendor/
 .idea/
 index.php
 bin/

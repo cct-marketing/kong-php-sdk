@@ -1,0 +1,56 @@
+CCT\Kong\Model\Api:
+  properties:
+    id:
+      type: string
+      groups: [read]
+    name:
+      type: string
+      groups: [create, read, update]
+    preserve_host:
+      type: boolean_string
+    hosts:
+      type: array
+      groups: [create, read, update]
+    uris:
+      type: array
+      groups: [create, read, update]
+    methods:
+      type: array
+      groups: [create, read, update]
+    retries:
+      type: integer
+      groups: [create, read, update]
+    preserveHost:
+      type: integer
+      serialized_name: preserve_host
+      groups: [create, read, update]
+    httpsOnly:
+      type: boolean_string
+      groups: [create, read, update]
+    upstreamConnectTimeout:
+      type: integer
+      serialized_name: upstream_connect_timeout
+      groups: [create, read, update]
+    upstreamSendTimeout:
+      type: integer
+      serialized_name: upstream_send_timeout
+      groups: [create, read, update]
+    upstreamReadTimeout:
+      type: integer
+      serialized_name: upstream_read_timeout
+      groups: [create, read, update]
+    httpIfTerminated:
+      type: boolean_string
+      serialized_name: http_if_terminated
+      groups: [create, read, update]
+    stripUri:
+      type: boolean_string
+      groups: [create, read, update]
+    upstreamUrl:
+      type: string
+      serialized_name: upstream_url
+      groups: [create, read, update]
+    createdAt:
+      type: DateTime
+      serialized_name: created_at
+      groups: [read]

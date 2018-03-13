@@ -1,0 +1,26 @@
+CCT\Kong\Model\Plugin:
+  properties:
+    id:
+      type: string
+      groups: [read]
+    apiId:
+      type: string
+      groups: [create, read]
+      serialized_name: api_id
+    consumerId:
+      type: string
+      serialized_name: consumer_id
+      groups: [create, read]
+    name:
+      type: string
+      groups: [create, read]
+    config:
+      type: array
+      groups: [create, read, update]
+    enabled:
+      type: boolean_string
+      groups: [create, read, update]
+    createdAt:
+      type: DateTime
+      serialized_name: created_at
+      groups: [read]

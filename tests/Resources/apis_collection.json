@@ -1,0 +1,22 @@
+{
+   "data": [
+      {
+         "created_at": 1515689916427,
+         "http_if_terminated": false,
+         "https_only": false,
+         "id": "54ce5893-0985-46e7-b415-7e3fdde67dfb",
+         "name": "example",
+         "preserve_host": false,
+         "retries": 5,
+         "strip_uri": false,
+         "upstream_connect_timeout": 60000,
+         "upstream_read_timeout": 60000,
+         "upstream_send_timeout": 60000,
+         "upstream_url": "http://www.google.com",
+         "uris": [
+            "/prefix"
+         ]
+      }
+   ],
+   "total": 1
+}

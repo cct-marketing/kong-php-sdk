@@ -1,0 +1,16 @@
+CCT\Kong\Model\Consumer:
+  properties:
+    id:
+      type: string
+      groups: [read]
+    username:
+      type: string
+      groups: [create, read, update]
+    customId:
+      type: string
+      groups: [create, read, update]
+      serialized_name: custom_id
+    createdAt:
+      type: DateTime
+      serialized_name: created_at
+      groups: [read]

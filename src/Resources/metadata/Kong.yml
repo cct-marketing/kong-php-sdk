@@ -1,0 +1,16 @@
+CCT\Kong\Model\Kong:
+  properties:
+    hostname:
+      type: string
+      groups: [read]
+    luaVersion:
+      type: string
+      groups: [read]
+      serialized_name: lua_version
+    tagLine:
+      type: string
+      groups: [read]
+      serialized_name: tagline
+    version:
+      type: string
+      groups: [read]

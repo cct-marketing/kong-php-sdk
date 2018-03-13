@@ -1,0 +1,18 @@
+{
+   "api_id": "54ce5893-0985-46e7-b415-7e3fdde67dfb",
+   "config": {
+      "fault_tolerant": true,
+      "hide_client_headers": false,
+      "hour": 10000,
+      "limit_by": "consumer",
+      "policy": "cluster",
+      "redis_database": 0,
+      "redis_port": 6379,
+      "redis_timeout": 2000,
+      "second": 5
+   },
+   "created_at": 1516288128000,
+   "enabled": true,
+   "id": "dffa0564-2d40-4137-9ab1-002d5d01546d",
+   "name": "rate-limiting"
+}

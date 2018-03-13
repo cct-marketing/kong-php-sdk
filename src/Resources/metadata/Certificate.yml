@@ -1,0 +1,18 @@
+CCT\Kong\Model\Certificate:
+  properties:
+    id:
+      type: string
+      groups: [read, update]
+    cert:
+      type: string
+      groups: [create, read, update]
+    key:
+      type: string
+      groups: [create, read, update]
+    snis:
+      type: array
+      groups: [create, read, update]
+    createdAt:
+      type: DateTime
+      serialized_name: created_at
+      groups: [read, update]

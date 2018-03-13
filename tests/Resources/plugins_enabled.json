@@ -1,0 +1,32 @@
+{
+   "enabled_plugins": [
+      "response-transformer",
+      "correlation-id",
+      "statsd",
+      "jwt",
+      "cors",
+      "basic-auth",
+      "key-auth",
+      "ldap-auth",
+      "oauth2",
+      "http-log",
+      "ip-restriction",
+      "hmac-auth",
+      "request-size-limiting",
+      "datadog",
+      "tcp-log",
+      "request-transformer",
+      "file-log",
+      "acl",
+      "bot-detection",
+      "loggly",
+      "galileo",
+      "syslog",
+      "udp-log",
+      "response-ratelimiting",
+      "aws-lambda",
+      "runscope",
+      "rate-limiting",
+      "request-termination"
+   ]
+}

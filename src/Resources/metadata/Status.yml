@@ -1,0 +1,8 @@
+CCT\Kong\Model\Status:
+  properties:
+    database:
+      type: array
+      groups: [read]
+    server:
+      type: array
+      groups: [read]

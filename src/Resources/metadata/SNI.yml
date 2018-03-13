@@ -1,0 +1,13 @@
+CCT\Kong\Model\SNI:
+  properties:
+    name:
+      type: string
+      groups: [create, read]
+    certificateId:
+      type: string
+      groups: [create, read, update]
+      serialized_name: "ssl_certificate_id"
+    createdAt:
+      type: DateTime
+      serialized_name: created_at
+      groups: [read, update]

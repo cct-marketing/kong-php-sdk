@@ -3,3 +3,4 @@ vendor/
 .idea/
 index.php
 bin/
+phpunit.xml

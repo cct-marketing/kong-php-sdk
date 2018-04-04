@@ -34,7 +34,7 @@ class Kong implements ExtraFieldsInterface
     /**
      * @return string
      */
-    public function getHostname() : string
+    public function getHostname(): string
     {
         return $this->hostname;
     }
@@ -42,7 +42,7 @@ class Kong implements ExtraFieldsInterface
     /**
      * @return string
      */
-    public function getLuaVersion() : string
+    public function getLuaVersion(): string
     {
         return $this->luaVersion;
     }
@@ -50,7 +50,7 @@ class Kong implements ExtraFieldsInterface
     /**
      * @return string
      */
-    public function getTagLine() : string
+    public function getTagLine(): string
     {
         return $this->tagLine;
     }
@@ -58,7 +58,7 @@ class Kong implements ExtraFieldsInterface
     /**
      * @return string
      */
-    public function getVersion() : string
+    public function getVersion(): string
     {
         return $this->version;
     }

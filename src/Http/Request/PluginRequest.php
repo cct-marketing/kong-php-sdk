@@ -17,19 +17,19 @@ class PluginRequest extends Request
 {
     protected function setUp()
     {
-        if (false === $this->config->containsKey(Config::URI_PREFIX)) {
+        if (false === $this->config->has(Config::URI_PREFIX)) {
             $this->config->set(Config::URI_PREFIX, '/plugins/');
         }
     }
 
-    public function list(QueryParams $queryParams = null) : ResponseInterface
+    public function list(QueryParams $queryParams = null): ResponseInterface
     {
         $this->config->set('serialization_context', SerializationContext::create()->setGroups('read'));
 
         return parent::requestGet($this->getUri(), $queryParams);
     }
 
-    public function listEnabled() : ResponseInterface
+    public function listEnabled(): ResponseInterface
     {
         $this->config->set('serialization_context', SerializationContext::create()->setGroups('read'));
         $this->config->set(Config::RESPONSE_TRANSFORMERS, []);
@@ -37,14 +37,14 @@ class PluginRequest extends Request
         return parent::requestGet($this->appendToUri('/enabled/'), null);
     }
 
-    public function listByApi(string $apiId) : ResponseInterface
+    public function listByApi(string $apiId): ResponseInterface
     {
         $this->config->set('serialization_context', SerializationContext::create()->setGroups('read'));
 
         return parent::requestGet($this->getUriByApiId($apiId), null);
     }
 
-    public function create(Plugin $plugin, string $apiId = null) : ResponseInterface
+    public function create(Plugin $plugin, string $apiId = null): ResponseInterface
     {
         if (null === $plugin->getApiId() && null === $apiId) {
             throw new InvalidParameterException('The API ID is required to create a new Plugin.');
@@ -59,7 +59,7 @@ class PluginRequest extends Request
         return parent::requestPost($uri, $plugin, null);
     }
 
-    public function retrieve(string $apiId, string $pluginId) : ResponseInterface
+    public function retrieve(string $apiId, string $pluginId): ResponseInterface
     {
         $this->config->set('serialization_context', SerializationContext::create()->setGroups('read'));
         $uri = $this->getUriByApiId($apiId);
@@ -67,7 +67,7 @@ class PluginRequest extends Request
         return parent::requestGet($this->appendToUri($pluginId, $uri), null);
     }
 
-    public function retrieveSchema(string $pluginName) : ResponseInterface
+    public function retrieveSchema(string $pluginName): ResponseInterface
     {
         $this->config->set('serialization_context', SerializationContext::create()->setGroups('read'));
         $this->config->set(Config::RESPONSE_TRANSFORMERS, []);
@@ -80,7 +80,7 @@ class PluginRequest extends Request
         return parent::requestGet($uri, null);
     }
 
-    public function update(Plugin $plugin) : ResponseInterface
+    public function update(Plugin $plugin): ResponseInterface
     {
         $this->config->set('serialization_context', SerializationContext::create()->setGroups('update'));
         $this->changeFormNormalizer();
@@ -90,7 +90,7 @@ class PluginRequest extends Request
         return parent::requestPatch($this->appendToUri($plugin->getId(), $uri), $plugin, null);
     }
 
-    public function updateOrCreate(Plugin $plugin, string $apiId = null) : ResponseInterface
+    public function updateOrCreate(Plugin $plugin, string $apiId = null): ResponseInterface
     {
         if (null === $plugin->getApiId() && null === $apiId) {
             throw new InvalidParameterException('The API ID is required to create a new Plugin.');
@@ -105,7 +105,7 @@ class PluginRequest extends Request
         return parent::requestPut($uri, $plugin, null);
     }
 
-    public function delete(Plugin $plugin) : ResponseInterface
+    public function delete(Plugin $plugin): ResponseInterface
     {
         $this->validateObjectId($plugin);
         $this->config->set('serialization_context', SerializationContext::create()->setGroups('delete'));
@@ -120,7 +120,7 @@ class PluginRequest extends Request
      *
      * @return string
      */
-    protected function getUriByApiId(string $apiId) : string
+    protected function getUriByApiId(string $apiId): string
     {
         return sprintf(
             '/apis/%s/%s',
@@ -134,7 +134,7 @@ class PluginRequest extends Request
      *
      * @return void
      */
-    protected function changeFormNormalizer() : void
+    protected function changeFormNormalizer(): void
     {
         $this->config->set(
             Config::FORM_NORMALIZER,

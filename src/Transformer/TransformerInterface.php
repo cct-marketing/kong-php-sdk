@@ -23,5 +23,5 @@ interface TransformerInterface
      *
      * @return bool
      */
-    public function supports(ResponseInterface $response) : bool;
+    public function supports(ResponseInterface $response): bool;
 }

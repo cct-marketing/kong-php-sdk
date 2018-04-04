@@ -35,7 +35,7 @@ class Response extends BaseResponse implements ResponseInterface
         $this->data = $data;
     }
 
-    protected function jsonToArray(string $content = null) : ?array
+    protected function jsonToArray(string $content = null): ?array
     {
         if (empty($content)) {
             return null;

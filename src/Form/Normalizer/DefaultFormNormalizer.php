@@ -29,7 +29,7 @@ class DefaultFormNormalizer implements FormNormalizerInterface
     /**
      * {@inheritdoc}
      */
-    public function normalize($formData = []) : array
+    public function normalize($formData = []): array
     {
         if (empty($formData)) {
             return [];
@@ -47,7 +47,7 @@ class DefaultFormNormalizer implements FormNormalizerInterface
         return $formParams;
     }
 
-    protected function normalizeParams(array $formData) : array
+    protected function normalizeParams(array $formData): array
     {
         $formParams = [];
         foreach ($formData as $key => $value) {

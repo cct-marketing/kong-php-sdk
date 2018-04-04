@@ -14,7 +14,7 @@ class StatusRequest extends Request
         $this->config->set(Config::URI_PREFIX, '/status');
     }
 
-    public function info() : ResponseInterface
+    public function info(): ResponseInterface
     {
         $this->config->set('serialization_context', SerializationContext::create()->setGroups('read'));
 

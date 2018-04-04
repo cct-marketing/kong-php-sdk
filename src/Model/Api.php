@@ -125,7 +125,7 @@ class Api
      *
      * @return null|string
      */
-    public function getId() : ?string
+    public function getId(): ?string
     {
         return $this->id;
     }
@@ -137,7 +137,7 @@ class Api
      *
      * @return static
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->name = $name;
 
@@ -149,7 +149,7 @@ class Api
      *
      * @return null|string
      */
-    public function getName() : ?string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -161,7 +161,7 @@ class Api
      *
      * @return static
      */
-    public function setRetries(int $attempts) : self
+    public function setRetries(int $attempts): self
     {
         $this->retries = $attempts;
 
@@ -173,7 +173,7 @@ class Api
      *
      * @return int
      */
-    public function getRetries() : int
+    public function getRetries(): int
     {
         return $this->retries;
     }
@@ -185,7 +185,7 @@ class Api
      *
      * @return static
      */
-    public function setHosts(array $hosts = []) : self
+    public function setHosts(array $hosts = []): self
     {
         $this->hosts = $hosts;
 
@@ -197,7 +197,7 @@ class Api
      *
      * @return array
      */
-    public function getHosts() : array
+    public function getHosts(): array
     {
         return $this->hosts;
     }
@@ -209,7 +209,7 @@ class Api
      *
      * @return static
      */
-    public function setUris(array $uris = []) : self
+    public function setUris(array $uris = []): self
     {
         $this->uris = $uris;
 
@@ -221,7 +221,7 @@ class Api
      *
      * @return array
      */
-    public function getUris() : array
+    public function getUris(): array
     {
         return $this->hosts;
     }
@@ -233,7 +233,7 @@ class Api
      *
      * @return static
      */
-    public function setMethods(array $methods = []) : self
+    public function setMethods(array $methods = []): self
     {
         $this->methods = $methods;
 
@@ -245,7 +245,7 @@ class Api
      *
      * @return array
      */
-    public function getMethods() : array
+    public function getMethods(): array
     {
         return $this->methods;
     }
@@ -257,7 +257,7 @@ class Api
      *
      * @return static
      */
-    public function setUpstreamUrl(string $upstreamUrl) : self
+    public function setUpstreamUrl(string $upstreamUrl): self
     {
         $this->upstreamUrl = $upstreamUrl;
 
@@ -269,7 +269,7 @@ class Api
      *
      * @return null|string
      */
-    public function getUpstreamUrl() : ?string
+    public function getUpstreamUrl(): ?string
     {
         return $this->upstreamUrl;
     }
@@ -281,7 +281,7 @@ class Api
      *
      * @return static
      */
-    public function setStripUri(bool $stripUri) : self
+    public function setStripUri(bool $stripUri): self
     {
         $this->stripUri = $stripUri;
 
@@ -293,7 +293,7 @@ class Api
      *
      * @return bool
      */
-    public function isStripUri() : bool
+    public function isStripUri(): bool
     {
         return $this->stripUri;
     }
@@ -306,7 +306,7 @@ class Api
      *
      * @return static
      */
-    public function setPreserveHost(bool $preserveHost) : self
+    public function setPreserveHost(bool $preserveHost): self
     {
         $this->preserveHost = $preserveHost;
 
@@ -319,7 +319,7 @@ class Api
      *
      * @return bool
      */
-    public function isPreserveHost() : bool
+    public function isPreserveHost(): bool
     {
         return $this->preserveHost;
     }
@@ -331,7 +331,7 @@ class Api
      *
      * @return static
      */
-    public function setHttpsOnly(bool $httpsOnly) : self
+    public function setHttpsOnly(bool $httpsOnly): self
     {
         $this->httpsOnly = $httpsOnly;
 
@@ -343,7 +343,7 @@ class Api
      *
      * @return bool
      */
-    public function getHttpsOnly() : bool
+    public function getHttpsOnly(): bool
     {
         return $this->httpsOnly;
     }
@@ -355,7 +355,7 @@ class Api
      *
      * @return static
      */
-    public function setUpstreamConnectTimeout(int $upstreamConnectTimeout) : self
+    public function setUpstreamConnectTimeout(int $upstreamConnectTimeout): self
     {
         $this->upstreamConnectTimeout = $upstreamConnectTimeout;
 
@@ -367,7 +367,7 @@ class Api
      *
      * @return int
      */
-    public function getUpstreamConnectTimeout() : int
+    public function getUpstreamConnectTimeout(): int
     {
         return $this->upstreamConnectTimeout;
     }
@@ -380,7 +380,7 @@ class Api
      *
      * @return static
      */
-    public function setUpstreamSendTimeout(int $upstreamSendTimeout) : self
+    public function setUpstreamSendTimeout(int $upstreamSendTimeout): self
     {
         $this->upstreamSendTimeout = $upstreamSendTimeout;
 
@@ -393,7 +393,7 @@ class Api
      *
      * @return int
      */
-    public function getUpstreamSendTimeout() : int
+    public function getUpstreamSendTimeout(): int
     {
         return $this->upstreamSendTimeout;
     }
@@ -406,7 +406,7 @@ class Api
      *
      * @return static
      */
-    public function setUpstreamReadTimeout(int $upstreamReadTimeout) : self
+    public function setUpstreamReadTimeout(int $upstreamReadTimeout): self
     {
         $this->upstreamReadTimeout = $upstreamReadTimeout;
 
@@ -419,7 +419,7 @@ class Api
      *
      * @return int
      */
-    public function getUpstreamReadTimeout() : int
+    public function getUpstreamReadTimeout(): int
     {
         return $this->upstreamReadTimeout;
     }
@@ -429,7 +429,7 @@ class Api
      *
      * @return static
      */
-    public function setHttpIfTerminated(bool $httpIfTerminated) : self
+    public function setHttpIfTerminated(bool $httpIfTerminated): self
     {
         $this->httpIfTerminated = $httpIfTerminated;
 
@@ -439,7 +439,7 @@ class Api
     /**
      * @return bool
      */
-    public function isHttpIfTerminated() : bool
+    public function isHttpIfTerminated(): bool
     {
         return $this->httpIfTerminated;
     }
@@ -449,7 +449,7 @@ class Api
      *
      * @return \DateTime|null
      */
-    public function getCreatedAt() : ?\DateTime
+    public function getCreatedAt(): ?\DateTime
     {
         return $this->createdAt;
     }

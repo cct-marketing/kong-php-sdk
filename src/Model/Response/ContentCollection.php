@@ -31,17 +31,17 @@ class ContentCollection
         $this->normalize($data);
     }
 
-    public function getTotal() : int
+    public function getTotal(): int
     {
         return $this->total;
     }
 
-    public function getNext() : ?string
+    public function getNext(): ?string
     {
         return $this->next;
     }
 
-    public function getOffset() : ?string
+    public function getOffset(): ?string
     {
         return $this->offset;
     }

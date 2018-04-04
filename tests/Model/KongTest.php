@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace CCT\Kong\Tests\Model;
 
-use CCT\Kong\Collection\CollectionInterface;
+use CCT\Component\Collections\CollectionInterface;
 use CCT\Kong\Model\Kong;
 use CCT\Kong\Tests\Helper\ProtectedMethodSetter;
 use PHPUnit\Framework\TestCase;

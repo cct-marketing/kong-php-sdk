@@ -56,7 +56,7 @@ class Client
 
     public function __construct(Config $config, bool $defaultConfig = true)
     {
-        Assert::that($config->toArray())->keyExists(Config::ENDPOINT);
+        Assert::that($config->all())->keyExists(Config::ENDPOINT);
 
         $this->defaultConfig = $defaultConfig;
         $this->config = $config;
@@ -72,7 +72,7 @@ class Client
     /**
      * @return KongRequest
      */
-    public function kong() : KongRequest
+    public function kong(): KongRequest
     {
         $config = clone $this->config;
         $modelClass = $config->get('kong.model.class', Kong::class);
@@ -102,7 +102,7 @@ class Client
     /**
      * @return StatusRequest
      */
-    public function status() : StatusRequest
+    public function status(): StatusRequest
     {
         $config = clone $this->config;
         $modelClass = $config->get('status.model.class', Status::class);
@@ -118,7 +118,7 @@ class Client
     /**
      * @return ApiRequest
      */
-    public function apis() : ApiRequest
+    public function apis(): ApiRequest
     {
         $config = clone $this->config;
         $modelClass = $config->get('api.model.class', Api::class);
@@ -134,7 +134,7 @@ class Client
     /**
      * @return ConsumerRequest
      */
-    public function consumers() : ConsumerRequest
+    public function consumers(): ConsumerRequest
     {
         $config = clone $this->config;
         $modelClass = $config->get('consumer.model.class', Consumer::class);
@@ -150,7 +150,7 @@ class Client
     /**
      * @return PluginRequest
      */
-    public function plugins() : PluginRequest
+    public function plugins(): PluginRequest
     {
         $config = clone $this->config;
         $modelClass = $config->get('plugin.model.class', Plugin::class);
@@ -166,7 +166,7 @@ class Client
     /**
      * @return CertificateRequest
      */
-    public function certificates() : CertificateRequest
+    public function certificates(): CertificateRequest
     {
         $config = clone $this->config;
         $modelClass = $config->get('certificate.model.class', Certificate::class);
@@ -182,7 +182,7 @@ class Client
     /**
      * @return SNIRequest
      */
-    public function snis() : SNIRequest
+    public function snis(): SNIRequest
     {
         $config = clone $this->config;
         $modelClass = $config->get('sni.model.class', SNI::class);
@@ -205,7 +205,7 @@ class Client
         $this->defaultConfig = false;
     }
 
-    public function isDefaultConfig() : bool
+    public function isDefaultConfig(): bool
     {
         return $this->defaultConfig;
     }
@@ -276,7 +276,7 @@ class Client
      *
      * @return bool
      */
-    protected function shouldUseDefaultResponseTransformers() : bool
+    protected function shouldUseDefaultResponseTransformers(): bool
     {
         return (bool) $this->config->get(Config::USE_DEFAULT_RESPONSE_TRANSFORMERS, true);
     }

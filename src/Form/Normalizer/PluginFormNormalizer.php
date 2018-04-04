@@ -28,7 +28,7 @@ class PluginFormNormalizer implements FormNormalizerInterface
     /**
      * {@inheritdoc}
      */
-    public function normalize($formData = []) : array
+    public function normalize($formData = []): array
     {
         if (empty($formData)) {
             return [];
@@ -51,7 +51,7 @@ class PluginFormNormalizer implements FormNormalizerInterface
      *
      * @return array
      */
-    protected function normalizeParams(array $formData) : array
+    protected function normalizeParams(array $formData): array
     {
         $formParams = [];
         foreach ($formData as $key => $value) {
@@ -73,7 +73,7 @@ class PluginFormNormalizer implements FormNormalizerInterface
         return $formParams;
     }
 
-    protected function setConfigParams(&$formParams, array $configData) : void
+    protected function setConfigParams(&$formParams, array $configData): void
     {
         foreach ($configData as $key => $data) {
             if (false === strpos($key, 'config.')) {

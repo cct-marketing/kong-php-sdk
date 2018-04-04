@@ -4,6 +4,7 @@
     "type": "library",
     "require": {
         "php": "~7.1",
+        "cct-marketing/collections": "~1.0",
         "guzzlehttp/guzzle": "^6.2",
         "jms/serializer": "^1.10",
         "symfony/yaml": "^4.0",

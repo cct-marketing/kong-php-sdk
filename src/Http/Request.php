@@ -288,7 +288,7 @@ abstract class Request implements RequestInterface
      *
      * @return void
      */
-    protected function setSerializationContextFor(array $groups = []) : void
+    protected function setSerializationContextFor(array $groups = []): void
     {
         $serializationContext = SerializationContext::create()->setGroups($groups);
 
@@ -300,7 +300,7 @@ abstract class Request implements RequestInterface
      *
      * @return \ReflectionClass
      */
-    private function createResponseReflectionInstance() : \ReflectionClass
+    private function createResponseReflectionInstance(): \ReflectionClass
     {
         $responseClass = $this->config->get(Config::RESPONSE_CLASS, Response::class);
         $responseRef = new \ReflectionClass($responseClass);
@@ -346,7 +346,7 @@ abstract class Request implements RequestInterface
     private function validateConfig()
     {
         Assert::lazy()
-            ->that($this->config->toArray(), Config::URI_PREFIX)->keyExists(Config::URI_PREFIX)
+            ->that($this->config->all(), Config::URI_PREFIX)->keyExists(Config::URI_PREFIX)
             ->verifyNow()
         ;
     }

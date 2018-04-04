@@ -55,7 +55,7 @@ class TimestampDatetimeHandler implements SubscribingHandlerInterface
         \DateTime $date,
         array $type,
         Context $context
-    ) : int {
+    ): int {
         $time = (int) substr($date->format('Uu'), 0, 13);
 
         return $visitor->visitInteger($time, $type, $context);

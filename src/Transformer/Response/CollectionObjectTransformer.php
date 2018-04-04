@@ -36,7 +36,7 @@ class CollectionObjectTransformer extends SerializerTransformer
      *
      * {@inheritdoc}
      */
-    public function supports(ResponseInterface $response) : bool
+    public function supports(ResponseInterface $response): bool
     {
         $data = $response->getData();
 

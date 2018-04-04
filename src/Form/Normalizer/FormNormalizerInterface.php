@@ -13,5 +13,5 @@ interface FormNormalizerInterface
      *
      * @return array
      */
-    public function normalize($formData = []) : array;
+    public function normalize($formData = []): array;
 }

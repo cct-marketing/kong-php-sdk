@@ -19,7 +19,7 @@ class Status
     /**
      * @return array
      */
-    public function getDatabase() : array
+    public function getDatabase(): array
     {
         return $this->database;
     }
@@ -27,7 +27,7 @@ class Status
     /**
      * @return array
      */
-    public function getServer() : array
+    public function getServer(): array
     {
         return $this->server;
     }

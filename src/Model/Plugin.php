@@ -55,7 +55,7 @@ class Plugin
      *
      * @return string
      */
-    public function getId() : ?string
+    public function getId(): ?string
     {
         return $this->id;
     }
@@ -63,7 +63,7 @@ class Plugin
     /**
      * @return string
      */
-    public function getApiId() : ?string
+    public function getApiId(): ?string
     {
         return $this->apiId;
     }
@@ -73,7 +73,7 @@ class Plugin
      *
      * @return static
      */
-    public function setApiId(string $apiId) : self
+    public function setApiId(string $apiId): self
     {
         $this->apiId = $apiId;
 
@@ -83,7 +83,7 @@ class Plugin
     /**
      * @return string
      */
-    public function getConsumerId() : string
+    public function getConsumerId(): string
     {
         return $this->consumerId;
     }
@@ -93,7 +93,7 @@ class Plugin
      *
      * @return static
      */
-    public function setConsumerId(string $consumerId) : self
+    public function setConsumerId(string $consumerId): self
     {
         $this->consumerId = $consumerId;
 
@@ -103,7 +103,7 @@ class Plugin
     /**
      * @return string
      */
-    public function getName() : string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -113,7 +113,7 @@ class Plugin
      *
      * @return static
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->name = $name;
 
@@ -123,7 +123,7 @@ class Plugin
     /**
      * @return array
      */
-    public function getConfig() : array
+    public function getConfig(): array
     {
         return $this->config;
     }
@@ -133,14 +133,14 @@ class Plugin
      *
      * @return static
      */
-    public function setConfig(array $config) : self
+    public function setConfig(array $config): self
     {
         $this->config = $config;
 
         return $this;
     }
 
-    public function replaceConfig(array $conf) : self
+    public function replaceConfig(array $conf): self
     {
         $this->config = array_replace_recursive($this->config, $conf);
 
@@ -150,7 +150,7 @@ class Plugin
     /**
      * @return bool
      */
-    public function isEnabled() : bool
+    public function isEnabled(): bool
     {
         return $this->enabled;
     }
@@ -160,7 +160,7 @@ class Plugin
      *
      * @return static
      */
-    public function setEnabled(bool $enabled) : self
+    public function setEnabled(bool $enabled): self
     {
         $this->enabled = $enabled;
 
@@ -170,7 +170,7 @@ class Plugin
     /**
      * @return \DateTime
      */
-    public function getCreatedAt() : ?\DateTime
+    public function getCreatedAt(): ?\DateTime
     {
         return $this->createdAt;
     }

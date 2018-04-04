@@ -18,7 +18,7 @@ class SNIRequest extends Request
      */
     protected function setUp()
     {
-        if (!$this->config->containsKey(Config::URI_PREFIX)) {
+        if (!$this->config->has(Config::URI_PREFIX)) {
             $this->config->set(Config::URI_PREFIX, '/snis/');
         }
     }
@@ -30,7 +30,7 @@ class SNIRequest extends Request
      *
      * @return ResponseInterface|Response
      */
-    public function list(QueryParams $queryParams = null) : ResponseInterface
+    public function list(QueryParams $queryParams = null): ResponseInterface
     {
         $this->setSerializationContextFor(['read']);
 
@@ -44,7 +44,7 @@ class SNIRequest extends Request
      *
      * @return ResponseInterface|Response
      */
-    public function create(SNI $sni) : ResponseInterface
+    public function create(SNI $sni): ResponseInterface
     {
         $this->setSerializationContextFor(['create']);
 
@@ -58,7 +58,7 @@ class SNIRequest extends Request
      *
      * @return ResponseInterface|Response
      */
-    public function retrieve(string $name) : ResponseInterface
+    public function retrieve(string $name): ResponseInterface
     {
         $this->setSerializationContextFor(['read']);
 
@@ -72,7 +72,7 @@ class SNIRequest extends Request
      *
      * @return ResponseInterface|Response
      */
-    public function update(SNI $sni) : ResponseInterface
+    public function update(SNI $sni): ResponseInterface
     {
         $this->setSerializationContextFor(['update']);
 
@@ -98,7 +98,7 @@ class SNIRequest extends Request
      *
      * @return ResponseInterface
      */
-    public function delete(SNI $sni) : ResponseInterface
+    public function delete(SNI $sni): ResponseInterface
     {
         if (null === $sni->getName()) {
             throw new InvalidParameterException('The name must be defined to delete the SNI.');

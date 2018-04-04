@@ -31,7 +31,7 @@ class Consumer
      *
      * @return null|string
      */
-    public function getId() : ?string
+    public function getId(): ?string
     {
         return $this->id;
     }
@@ -43,7 +43,7 @@ class Consumer
      *
      * @return static
      */
-    public function setUsername(string $username) : self
+    public function setUsername(string $username): self
     {
         $this->username = $username;
 
@@ -55,7 +55,7 @@ class Consumer
      *
      * @return string
      */
-    public function getUsername() : ?string
+    public function getUsername(): ?string
     {
         return $this->username;
     }
@@ -67,7 +67,7 @@ class Consumer
      *
      * @return static
      */
-    public function setCustomId(string $customId) : self
+    public function setCustomId(string $customId): self
     {
         $this->customId = $customId;
 
@@ -79,7 +79,7 @@ class Consumer
      *
      * @return null|string
      */
-    public function getCustomId() : ?string
+    public function getCustomId(): ?string
     {
         return $this->customId;
     }
@@ -89,7 +89,7 @@ class Consumer
      *
      * @return \DateTime
      */
-    public function getCreatedAt() : ?\DateTime
+    public function getCreatedAt(): ?\DateTime
     {
         return $this->createdAt;
     }

@@ -28,7 +28,7 @@ class SNI
      *
      * @return static
      */
-    public function setName(string $name) : self
+    public function setName(string $name): self
     {
         $this->name = $name;
 
@@ -40,7 +40,7 @@ class SNI
      *
      * @return null|string
      */
-    public function getName() : ?string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -52,7 +52,7 @@ class SNI
      *
      * @return static
      */
-    public function setCertificateId(string $certificateId) : self
+    public function setCertificateId(string $certificateId): self
     {
         $this->certificateId = $certificateId;
 
@@ -64,7 +64,7 @@ class SNI
      *
      * @return null|string
      */
-    public function getCertificateId() : ?string
+    public function getCertificateId(): ?string
     {
         return $this->certificateId;
     }
@@ -74,7 +74,7 @@ class SNI
      *
      * @return \DateTime|null
      */
-    public function getCreatedAt() : ?\DateTime
+    public function getCreatedAt(): ?\DateTime
     {
         return $this->createdAt;
     }

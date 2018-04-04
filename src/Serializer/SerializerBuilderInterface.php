@@ -13,5 +13,5 @@ interface SerializerBuilderInterface
      *
      * @return SerializerInterface
      */
-    public function build() : SerializerInterface;
+    public function build(): SerializerInterface;
 }

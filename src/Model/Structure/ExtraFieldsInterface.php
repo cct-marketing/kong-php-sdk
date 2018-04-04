@@ -2,7 +2,7 @@
 
 namespace CCT\Kong\Model\Structure;
 
-use CCT\Kong\Collection\CollectionInterface;
+use CCT\Component\Collections\CollectionInterface;
 
 interface ExtraFieldsInterface
 {
@@ -11,5 +11,5 @@ interface ExtraFieldsInterface
      *
      * @return CollectionInterface
      */
-    public function getExtraFields() : CollectionInterface;
+    public function getExtraFields(): CollectionInterface;
 }

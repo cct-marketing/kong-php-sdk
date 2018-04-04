@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace CCT\Kong\Http\Definition;
 
-use CCT\Kong\Collection\ArrayCollection;
+use CCT\Component\Collections\ParameterCollection;
 
-class QueryParams extends ArrayCollection
+class QueryParams extends ParameterCollection
 {
     public function toString()
     {
@@ -14,7 +14,7 @@ class QueryParams extends ArrayCollection
             return '';
         }
 
-        return '?' . http_build_query($this->toArray());
+        return '?' . http_build_query($this->all());
     }
 
     public static function create($params = [])

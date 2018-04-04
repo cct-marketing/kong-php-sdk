@@ -33,12 +33,12 @@ class ServiceUnavailableException extends \RuntimeException
         parent::__construct($message);
     }
 
-    public function getRequest() : RequestInterface
+    public function getRequest(): RequestInterface
     {
         return $this->request;
     }
 
-    public function getStatusCode() : int
+    public function getStatusCode(): int
     {
         return $this->statusCode;
     }

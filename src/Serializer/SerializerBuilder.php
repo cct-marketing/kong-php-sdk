@@ -130,7 +130,7 @@ class SerializerBuilder implements SerializerBuilderInterface
     /**
      * {@inheritdoc}
      */
-    public function build() : SerializerInterface
+    public function build(): SerializerInterface
     {
         $this->jmsSerializerBuilder->setDebug($this->config->get('debug', false));
 

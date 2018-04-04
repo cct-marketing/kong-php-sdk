@@ -44,7 +44,7 @@ class Certificate
      */
     protected $createdAt;
 
-    public function getId() : ?string
+    public function getId(): ?string
     {
         return $this->id;
     }
@@ -52,7 +52,7 @@ class Certificate
     /**
      * @return string
      */
-    public function getCert() : ?string
+    public function getCert(): ?string
     {
         return $this->cert;
     }
@@ -62,7 +62,7 @@ class Certificate
      *
      * @return static
      */
-    public function setCert(string $cert) : self
+    public function setCert(string $cert): self
     {
         $this->cert = $cert;
 
@@ -72,7 +72,7 @@ class Certificate
     /**
      * @return string
      */
-    public function getKey() : ?string
+    public function getKey(): ?string
     {
         return $this->key;
     }
@@ -82,7 +82,7 @@ class Certificate
      *
      * @return static
      */
-    public function setKey(string $key) : self
+    public function setKey(string $key): self
     {
         $this->key = $key;
 
@@ -92,7 +92,7 @@ class Certificate
     /**
      * @return array
      */
-    public function getSNIs() : array
+    public function getSNIs(): array
     {
         return $this->snis;
     }
@@ -102,7 +102,7 @@ class Certificate
      *
      * @return static
      */
-    public function setSNIs(array $snis) : self
+    public function setSNIs(array $snis): self
     {
         $this->snis = $snis;
 
@@ -112,7 +112,7 @@ class Certificate
     /**
      * @return \DateTime|null
      */
-    public function getCreatedAt() : ?\DateTime
+    public function getCreatedAt(): ?\DateTime
     {
         return $this->createdAt;
     }

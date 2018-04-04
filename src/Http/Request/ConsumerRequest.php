@@ -18,21 +18,21 @@ class ConsumerRequest extends Request
         $this->config->set(Config::URI_PREFIX, '/consumers/');
     }
 
-    public function list(QueryParams $queryParams = null) : ResponseInterface
+    public function list(QueryParams $queryParams = null): ResponseInterface
     {
         $this->config->set('serialization_context', SerializationContext::create()->setGroups('read'));
 
         return parent::requestGet($this->getUri(), $queryParams);
     }
 
-    public function create(Consumer $consumer) : ResponseInterface
+    public function create(Consumer $consumer): ResponseInterface
     {
         $this->config->set('serialization_context', SerializationContext::create()->setGroups('create'));
 
         return parent::requestPost($this->getUri(), $consumer, null);
     }
 
-    public function update(Consumer $consumer) : ResponseInterface
+    public function update(Consumer $consumer): ResponseInterface
     {
         $this->validateObjectId($consumer);
         $this->config->set('serialization_context', SerializationContext::create()->setGroups('update'));
@@ -40,7 +40,7 @@ class ConsumerRequest extends Request
         return parent::requestPatch($this->appendToUri($consumer->getId()), $consumer, null);
     }
 
-    public function updateOrCreate(Consumer $consumer) : ResponseInterface
+    public function updateOrCreate(Consumer $consumer): ResponseInterface
     {
         $this->config->set('serialization_context', SerializationContext::create()->setGroups('update'));
 
@@ -54,14 +54,14 @@ class ConsumerRequest extends Request
         return parent::requestPut($uri, $consumer, null);
     }
 
-    public function retrieve(string $usernameOrId) : ResponseInterface
+    public function retrieve(string $usernameOrId): ResponseInterface
     {
         $this->config->set('serialization_context', SerializationContext::create()->setGroups('read'));
 
         return parent::requestGet($this->appendToUri($usernameOrId), null);
     }
 
-    public function delete(Consumer $consumer) : ResponseInterface
+    public function delete(Consumer $consumer): ResponseInterface
     {
         $this->validateObjectId($consumer);
         $this->config->set('serialization_context', SerializationContext::create()->setGroups('delete'));

@@ -2,9 +2,9 @@
 
 namespace CCT\Kong;
 
-use CCT\Kong\Collection\ArrayCollection;
+use CCT\Component\Collections\ParameterCollection;
 
-class Config extends ArrayCollection
+class Config extends ParameterCollection
 {
     const ENDPOINT = 'kong.config.endpoint';
 
